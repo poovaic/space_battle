@@ -93,16 +93,22 @@ function game(player, alien){
         for(i=0;i<aliens.length;i++){  //i=5
            game(ussHelloWorld,aliens[i]); // aliens[5]
            if (i<(aliens.length-1)){
-           let input = prompt('Do you want to "attack" or "retreat"');
-           input = input.toLowerCase;
+            //console.log('before input')
+           let input = window.prompt('Do you want to "attack" or "retreat"');
+           //console.log('after window prompt')
+           input = input.toLowerCase();
            if (input === 'attack'){
+            //console.log('attack')
             continue;
            }
             else if (input === "retreat"){
+                
             console.log("%c Game over.You win",'color:green')
             alert("Game over.You win")
-            break;
-           }}
+            return;
+           }
+        }           
+
         
        
 
